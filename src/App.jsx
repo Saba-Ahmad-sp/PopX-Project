@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import SignUp from "./components/SignUp";
 import Login from "./components/Login";
@@ -8,10 +9,12 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Home />
-      <SignUp />
-      <Login />
-      <Account />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/account" element={<Account />} /> 
+      </Routes>
     </>
   );
 }
